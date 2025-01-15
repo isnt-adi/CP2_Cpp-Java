@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool validate(int grade) {
+    return (grade >= 0 && grade <= 100);}
+void ask(string trimename, int &trime){
+    while (true) {
+        cout << "Please Enter your " << trimename << " Grades: ";
+        cin >> trime;
+        if (validate(trime)){
+            break;}
+        else{
+            cout << "Please input a valid grade between 0 and 100.";}}}
+        
+int main() {
+    
+int prelims, midterms, finals;
+float finalgrade;
+
+ask("Prelim",prelims);
+ask("Midterm",midterms);
+ask("Finals",finals);
+finalgrade = (prelims+midterms+finals)/3.0; 
+cout << finalgrade;
+return 0;
+}
