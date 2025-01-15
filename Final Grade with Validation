@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+int prelims, midterms, finals; 
+float finalgrade;
+
+cout << "Please Enter your Prelim Grades: ";
+cin >> prelims;
+if (prelims >0 && prelims < 100){
+    cout << "Please Enter your Midterm Grades: ";
+    cin >> midterms;
+    if (midterms > 0 && midterms <100){
+        cout << "Please Enter your Finals Grades: ";
+        cin >> finals;
+        if (finals > 0 && finals < 100){
+            finalgrade = (prelims+midterms+finals)/3.0;
+            cout << finalgrade;
+        }else
+            cout << "Please input a valid grade between 0 and 100.";    
+    }else
+        cout << "Please input a valid grade between 0 and 100.";
+}else
+    cout << "Please input a valid grade between 0 and 100.";    
+    return 0;
+}
