@@ -1,32 +1,27 @@
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
-bool validate(int grade) {
-    return (grade >= 0 && grade <= 100);}
-void ask(string trimename, int &trime) {
-    cout << "Please Enter your " << trimename << " Grades: ";
-    cin >> trime;}
-
+bool validate(float grade) {
+    return (grade >= 0 && grade <= 100 && isdigit(grade));}
+void ask(string trimename, float &trime){
+    while (true) {
+        cout << "Please Enter your " << trimename << " Grades: ";
+        cin >> trime;
+        if (validate(trime)){
+            break;}
+        else{
+            cout << "Please input a valid grade between 0 and 100.";}}}
+        
 int main() {
     
-int prelims, midterms, finals;
-string error = "Please input a valid grade between 0 and 100.";
-float finalgrade;
+float prelims, midterms, finals, finalgrade;
 
 ask("Prelim",prelims);
-if (validate(prelims)){
-    ask("Midterm",midterms);
-    if (validate(midterms)){
-        ask("Finals",finals);
-        if (validate(finals)){
-            finalgrade = (prelims+midterms+finals)/3.0;
-            cout << finalgrade;
-        }else
-            cout << error;    
-    }else
-        cout << error;
-}else
-    cout << error;    
-    return 0;
+ask("Midterm",midterms);
+ask("Finals",finals);
+finalgrade = (prelims+midterms+finals)/3.0; 
+cout << finalgrade;
+return 0;
 }
