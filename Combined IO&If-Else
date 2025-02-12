@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter your Name: ");
+        Scanner nameinput = new Scanner(System.in);
+        String name = nameinput.nextLine(), letter = "";
+        System.out.print("Enter your Grade: ");
+        Scanner gradeinput = new Scanner(System.in);
+        int grade = gradeinput.nextInt();
+        if(grade >= 91 && grade <= 100)
+            {letter = "A!!";}
+        else if(grade >= 81 && grade <= 90)
+            {letter = "B!";}
+        else if(grade >= 71 && grade <= 80)
+            {letter = "C.";}
+        else if(grade < 70)
+            {letter = "F...";}
+        else{System.out.println("N/A");}
+        System.out.println("Hi, " + name + "!, Your Grade is " + letter);
+    }
+}
