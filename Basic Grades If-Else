@@ -1,6 +1,12 @@
+//Added value inputting
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        int grade = 75;
+        System.out.print("Enter your Grade: ");
+        Scanner input = new Scanner(System.in);
+        int grade = input.nextInt();
         if(grade >= 91 && grade <= 100)
             {System.out.println("A");}
         else if(grade >= 81 && grade <= 90)
