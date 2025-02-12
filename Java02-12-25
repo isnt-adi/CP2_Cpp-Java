@@ -1,7 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-      int a = 5, b = 6, c;
-      c = a + b;
-      System.out.println("The sum is " + (c + a));
+      int grade = 75;
+        if(grade > 91 && grade < 100)
+                System.out.println("A");
+            else if(grade > 81 && grade < 90)
+                System.out.println("B");
+            else if(grade > 71 && grade < 80)
+                System.out.println("C");
+            else if(grade < 70)
+                System.out.println("F");
+            else
+                System.out.println("Valid Grades -> (0-100)");
     }
 }
