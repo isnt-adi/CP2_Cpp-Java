@@ -1,0 +1,32 @@
+/* Create a Java program that will accept five numbers and get their average. The program 
+will display the following based on different ranges using the average; 51 - 100 = ++, 50 
+= ==, and 0 - 49 = --. The ++, and -- will be implemented once displayed on the average.*/
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+        int sum = 0, num = 0;
+        float ave;
+        
+        System.out.println("Please Enter Five Numbers.");
+        Scanner numinput = new Scanner(System.in);
+        
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Enter your number"+"("+i+"/5):");
+            num = numinput.nextInt();
+            sum += num; 
+            }
+            
+        ave = sum/5.0f;
+        
+        if (ave >= 51.0f && ave <=100.0f)
+            System.out.println("++ " + (++ave));
+        else if(ave == 50.0f)
+            System.out.println("== " + ave);
+        else if (ave >= 0.0f && ave <=49.0f)
+            System.out.println("-- " + (--ave));
+        else System.out.println("Please don't go beyond 0-100");
+    }
+}
