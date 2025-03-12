@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class MethodExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the first number:");
+        int a = scanner.nextInt();
+        System.out.println("Enter the second number:");
+        int b = scanner.nextInt();
+        System.out.println("Enter operator:");
+        string op = scanner.nextLine;
+        int result;
+        
+        if (op.equals("+"))
+            {result = add(a,b);
+            string word = "sum";}
+        else if (op.equals("-"))
+            {result = sub(a,b);
+            string word = "difference";}
+        else if (op.equals("*"))
+            result = mul(a,b);
+            string word = "product";}
+        else if (op.equals("/"))
+            {result = div(a,b);
+            string word = "quotient";}
+        else
+            {System.out.println("The valid operators are =,-,*,/")}
+            
+        System.out.println("The" + word + "of the numbers is " + result + ".");
+    }
+    
+    public static int add(int a,int b){
+        int sum;
+        return sum = a + b;}
+
+    public static int sub(int a,int b){
+        int dif;
+        return dif = a - b;}
+        
+    public static int mul(int a,int b){
+        int pro;
+        return pro = a*b;}
+        
+    public static int div(int a,int b){
+        int quo;
+        return quo = a/b;}
+
+}
