@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class SumDiffProdQuo {
+    public static double sums(int[] numbers){
+    int sum = 0;
+        for (int num: numbers){
+            sum += num;
+        }
+    return (double) sum;
+    }
+    
+    public static double diffs(int[] numbers){
+    int diff = 0;
+        for (int num: numbers){
+            diff -= num;
+        }
+    return (double) diff;
+    }
+    
+    public static double prods(int[] numbers){
+    int prod = 1;
+        for (int num: numbers){
+            prod *= num;
+        }
+    return (double) prod;
+    }
+    
+    public static double quos(int[] numbers){
+    double quo = 1.0;
+        for (int num: numbers){
+            quo /= num;
+        }
+    return (double) quo;
+    }
+    
+    public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Enter the number of elements: ");
+    int n = scanner.nextInt();
+    int[] numbers = new int [n];
+    
+    for (int i=0;i<n; i++){
+        System.out.println("Enter number " + (i+1) + ": ");
+        numbers[i] = scanner.nextInt();
+    }
+    double plus = sums(numbers);
+    double minus = diffs(numbers);
+    double times = prods(numbers);
+    double divide = quos(numbers);
+    
+    System.out.println("The sum is: " + plus);
+    System.out.println("The diff is: " + minus);
+    System.out.println("The prod is: " + times);
+    System.out.println("The quo is: " + divide);
+    }
+} 
