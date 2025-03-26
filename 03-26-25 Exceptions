@@ -49,8 +49,15 @@ public class Exception_Simple{
                 System.out.println("Finally block executed");
             }
             //--------------------------------------------------------
-
+            printAge(1);
             //--------------------------------------------------------
         }
-    
+        
+        public static void printAge(int age)
+        {
+            if (age <0){
+                throw new IllegalArgumentException ("Age cannot be negative");
+            }
+            System.out.println("Age:" + age);
+        }
 }
