@@ -1,0 +1,27 @@
+public class Exception_Simple{
+        public static void main (String[] ar)
+        {
+            try{
+                int divideByZero = 5/0;
+            }
+            catch(ArithmeticException e){
+                System.out.println("Arithmetic Exception: cannot divide by zero." + e.getMessage());
+            }
+            finally{
+                System.out.println("Finally block executed.");
+            }
+            try{
+                int[] arr = {1,2,3};
+                System.out.println(arr[3]);
+            }
+            catch (ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println("Caught array index out of bounds exception.");
+            }
+            catch (Exception e)
+            {
+                System.out.println("Caught general exception" + e.getMessage());
+            }
+        }
+    
+}
