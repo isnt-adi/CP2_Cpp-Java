@@ -1,0 +1,40 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+
+public class Demographic {
+    public static void main(String[] ar) {
+        Scanner scan = new Scanner(System.in);
+        String name = "";
+        int grade = 0;
+        boolean noError = false;
+
+                System.out.print("Enter name: ");
+                name = scan.nextLine();
+            
+        while (noError == false) {
+            try{
+                System.out.print("Enter grade: ");
+                grade = scan.nextInt();
+                scan.nextLine();
+                
+                if (grade < 0 || grade > 100) {
+                    throw new IllegalArgumentException("Grade must be between 0 and 100.");
+                }
+                noError = true;
+            }
+            catch (IllegalArgumentException e) {
+                System.out.println("Error: Invalid Input. \nPlease Input a Grade between 0 and 100.");
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Please only input numerical values for grades.");
+                scan.nextLine();
+            }
+        }
+    
+        if (grade >= 59) {
+            System.out.println("Hello, " + name + "! You passed.");
+        } else {
+            System.out.println("Hello, " + name + "! You failed.");
+        }
+    }
+}
