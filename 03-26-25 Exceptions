@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Exception_Simple{
         public static void main (String[] ar)
         {
+            //--------------------------------------------------------
             try{
                 int divideByZero = 5/0;
             }
@@ -14,7 +15,7 @@ public class Exception_Simple{
             finally{
                 System.out.println("Finally block executed.");
             }
-            //-------------------------------------------------------
+            //--------------------------------------------------------
             try{
                 int[] arr = {1,2,3};
                 System.out.println(arr[3]);
@@ -27,7 +28,7 @@ public class Exception_Simple{
             {
                 System.out.println("Caught general exception" + e.getMessage());
             }
-            //-------------------------------------------------------
+            //--------------------------------------------------------
             String str = null;
             try{
                 System.out.println(str.length());
@@ -41,12 +42,15 @@ public class Exception_Simple{
                 System.out.println("Enter first number: ");
                 boolean num1 = scan.nextBoolean();
             }
-            catch (ArithmeticException e){
+            catch (InputMismatchException e){
                 System.out.println("Error: Invalid Input");
             }
             finally{
                 System.out.println("Finally block executed");
             }
+            //--------------------------------------------------------
+
+            //--------------------------------------------------------
         }
     
 }
