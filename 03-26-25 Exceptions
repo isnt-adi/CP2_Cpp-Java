@@ -1,3 +1,7 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
 public class Exception_Simple{
         public static void main (String[] ar)
         {
@@ -10,6 +14,7 @@ public class Exception_Simple{
             finally{
                 System.out.println("Finally block executed.");
             }
+            //-------------------------------------------------------
             try{
                 int[] arr = {1,2,3};
                 System.out.println(arr[3]);
@@ -21,6 +26,26 @@ public class Exception_Simple{
             catch (Exception e)
             {
                 System.out.println("Caught general exception" + e.getMessage());
+            }
+            //-------------------------------------------------------
+            String str = null;
+            try{
+                System.out.println(str.length());
+            }
+            catch(NullPointerException e){
+                System.out.println("Null pointer exception caught.");
+            }
+            //--------------------------------------------------------
+            Scanner scan = new Scanner(System.in);
+            try{
+                System.out.println("Enter first number: ");
+                boolean num1 = scan.nextBoolean();
+            }
+            catch (ArithmeticException e){
+                System.out.println("Error: Invalid Input");
+            }
+            finally{
+                System.out.println("Finally block executed");
             }
         }
     
